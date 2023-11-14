@@ -1,4 +1,21 @@
-# *.o
-# *.m~
-# *.fig
-# *.mat
+# Object files:
+# Ignore compiled object files.
+*.o
+
+# Backup files:
+# Ignore backup files created by text editors.
+# These typically end with a tilde (~).
+*.m~
+
+# MATLAB/Octave Figures:
+# Ignore MATLAB or Octave figure files.
+# These are typically used for graphical output and are often not needed in source control.
+*.fig
+
+# MATLAB/Octave Workspace Files:
+# Ignore MATLAB workspace files.
+# These are binary files that store variables and are generally not useful for version control.
+*.mat
+
+# Add other patterns here as needed, with comments explaining their purpose.
+
