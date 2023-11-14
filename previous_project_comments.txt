@@ -1,0 +1,7 @@
+Q1 Ce sont des lignes de PE, pas des noeuds dégénérés. C’est d’ailleurs ce que vous montrez dans les figures en-dessous
+Q2 Il y a quelques erreurs de signe, mais les calculs ne sont pas indiqués…
+Q2 Il y a d’autres possibilités: noeud dégénéré, ligne de PE et Mouvement Uniforme
+Q2 La figure 6.c est un peu bancale.
+Q3 J’aurai voulu que tu m’exprimes les valeurs de a et de b en fonction l’une de l’autre. Plutôt que a+b>0, j’aurais voulu a > -b.
+Q4 Vous confondez de nouveau ligne de PE avec noeud dégénéré
+Rapport: Les figures laissent à désirer et le rapport manque de formalisme.
