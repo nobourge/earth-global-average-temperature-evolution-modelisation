@@ -60,7 +60,6 @@ ylabel('Temperature (K)');
 
 
 % OLR depending on Temperature in Celsius
-%T = 0 : 1 : 300; % Temperature in Celsius
 T0 = 0; % Temperature in Celsius
 R = 2.912; % Heat capacity (W-yr/m^2/K)
 A = 202; % Constant in W/m^2
@@ -78,6 +77,7 @@ ylabel('Temperature (C)');
 
 
 % Albedo depending on Temperature
+T0 = 14.84; % Temperature in Celsius
 alpha_temp = @(T) 0.5 + 0.2 * tanh(0.1 * (265 - T));
 
 [t5, T5] = ode45(@(t, T) (Q * (1 - alpha_temp(T)) - epsilon * sigma * T^4) / R, tspan, T0);
