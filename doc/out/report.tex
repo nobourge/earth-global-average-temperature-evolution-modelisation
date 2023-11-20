@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{subcaption}
 
 \title{Modeling and Simulation of Earth's Average Global Temperature}
 \author{Palmisano Luca \\ Bourgeois Noé}
@@ -137,6 +138,17 @@ T_{eq} = \left( \frac{342 \times (1 - 0.3)}{0.61 \times 5.67 \times 10^{-8}} \ri
 \end{equation}
 
 This equilibrium temperature is much closer to the actual average surface temperature of the Earth, demonstrating the significant impact of emissivity in the energy balance model.
+
+\begin{figure}[H]
+    \begin{subfigure}[width=0.4\linewidth]
+        \centering
+        \includegraphics[width=\linewidth]{ebm_with_olr_0.eps}
+    \end{subfigure}
+    \begin{subfigure}[width=0.4\linewidth]
+        \centering
+        \includegraphics[width=\linewidth]{ebm_with_diff_olrs.eps}
+    \end{subfigure}
+\end{figure}
 
 \section{Discussion}
 % Analyze the results you've presented.
