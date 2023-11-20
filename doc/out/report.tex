@@ -29,7 +29,7 @@ The methodology employed in this project involves simulating Earth's temperature
 % Use graphs and tables to present your data.
 % Example of including a figure:
 
-\subsection{Basic EBM}
+\subsection{Energy Balance Model}
 The equilibrium temperature of the system in the basic Energy Balance Model (EBM) is calculated by balancing the incoming solar radiation with the outgoing longwave radiation. This balance is represented by the equation:
 
 \begin{equation}
@@ -43,6 +43,8 @@ where:
     \item $\sigma$ is the Stefan-Boltzmann constant ($5.67 \times 10^{-8}$ W/m$^2$/K$^4$).
     \item $T_{eq}$ is the equilibrium temperature in Kelvin.
 \end{itemize}
+
+\subsubsection{Basic EBM}
 
 Rearranging the equation to solve for $T_{eq}$, we get:
 
@@ -97,7 +99,7 @@ due to the absorption of all incoming solar radiation.
 \label{fig:albedoExtremes}
 \end{figure}
 
-\subsubsection{Emissivity}
+\subsection{Emissivity}
 The equilibrium temperature of the system, 
 considering emissivity in the Energy Balance Model (EBM), 
 is calculated by modifying the original equation 
@@ -137,27 +139,48 @@ The equilibrium temperature ($T_{eq}$) is calculated as:
 T_{eq} = \left( \frac{342 \times (1 - 0.3)}{0.61 \times 5.67 \times 10^{-8}} \right)^{\frac{1}{4}} \approx 288.44 \, \text{K}
 \end{equation}
 
-This equilibrium temperature is much closer to the actual average surface temperature of the Earth, demonstrating the significant impact of emissivity in the energy balance model.
+Therefore, the equilibrium temperature of approximately 288.44 Kelvin 
+is equivalent to about 15.29°C (Celsius).
+
+This equilibrium temperature is much closer to the actual average surface temperature of the Earth, 
+demonstrating the significant impact of emissivity 
+in the energy balance model.
 
 
 \begin{figure}[ht]
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{\textwidth}
         \centering
         \includegraphics[width=\textwidth]{ebm_with_olr_0.eps}
-            \caption{First subfigure}
+            \caption{This plot demonstrates the hypothetical scenario 
+            where the Earth does not emit any longwave radiation,
+             with $\epsilon=0$, 
+            showing a temperature increase of nearly 85 Kelvin per year. }
         \label{fig:sub1}
     \end{subfigure}
+
+    \newpage
+    
     \hfill % Adds horizontal space between the subfigures
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{\textwidth}
         \centering
         \includegraphics[width=\textwidth]{ebm_with_diff_olrs.eps}
-        \caption{Second subfigure}
+        \caption{EBM simulation with typical $\epsilon=0.61$,
+        $\epsilon=0.76$, 
+        showing negligible temperature change,
+        and near maximum $\epsilon=0.95$, 
+        showing a small temperature decrease. 
+        This plot represents a more realistic scenario 
+        with a higher emissivity, 
+        resulting in minimal temperature variation over time.}
+
         \label{fig:sub2}
     \end{subfigure}
     \caption{Overall figure caption}
     \label{fig:test}
 \end{figure}
+
+\subsection{temperature dependant OLR}
 
 \section{Discussion}
 % Analyze the results you've presented.
