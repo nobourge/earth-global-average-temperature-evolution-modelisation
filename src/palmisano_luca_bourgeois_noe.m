@@ -30,7 +30,7 @@ xlabel('Time (years)');
 ylabel('Temperature (K)');
 legend('Alpha = 0', 'Alpha = 1');
 
-% EBM with OLR
+% EBM with OLR (epsilon = 0)
 epsilon = 0.00; % Emissivity factor
 [t3, T3] = ode45(@(t, T) (Q * (1 - alpha) - epsilon * sigma * T^4) / R, tspan, T0);
 figure; % Open a new figure window
@@ -39,13 +39,21 @@ title('EBM with OLR (ε = 0)');
 xlabel('Time (years)');
 ylabel('Temperature (K)');
 
-epsilons = [0.61, 0.76, 0.95]; % Emissivity factor
-[t4, T4] = ode45(@(t, T) (Q * (1 - alpha) - epsilons(1) * sigma * T^4) / R, tspan, T0);
-[t5, T5] = ode45(@(t, T) (Q * (1 - alpha) - epsilons(2) * sigma * T^4) / R, tspan, T0);
-[t6, T6] = ode45(@(t, T) (Q * (1 - alpha) - epsilons(3) * sigma * T^4) / R, tspan, T0);
+% EBM with OLR (different epsilon)
 figure; % Open a new figure window
-plot(t4, T4, 'r', t5, T5, 'b', t6, T6, 'g');
+
+epsilons = [0.61, 0.76, 0.95];
+legends = cell(1, 3);
+for i = 1:length(epsilons)
+    e = epsilons(i);
+    [t, T] = ode45(@(t, T) (Q * (1 - alpha) - e * sigma * T^4) / R, tspan, T0);
+    legends{i} = ['ε =', num2str(e)];
+    plot(t, T);
+    hold on;
+end
+hold off;
+
 title('EBM with OLR');
-legend('ε = 0.61', 'ε = 0.76', 'ε = 0.95');
+legend(legends);
 xlabel('Time (years)');
 ylabel('Temperature (K)');
