@@ -96,6 +96,48 @@ due to the absorption of all incoming solar radiation.
 \label{fig:albedoExtremes}
 \end{figure}
 
+\subsubsection{Emissivity}
+The equilibrium temperature of the system, 
+considering emissivity in the Energy Balance Model (EBM), 
+is calculated by modifying the original equation 
+to include the emissivity factor. 
+
+The modified equation at equilibrium is:
+
+\begin{equation}
+0 = Q(1 - \alpha) - \epsilon\sigma T_{eq}^4
+\end{equation}
+
+Rearranging this equation to solve for the equilibrium temperature ($T_{eq}$):
+
+\begin{equation}
+\epsilon\sigma T_{eq}^4 = Q(1 - \alpha)
+\end{equation}
+
+\begin{equation}
+T_{eq}^4 = \frac{Q(1 - \alpha)}{\epsilon\sigma}
+\end{equation}
+
+\begin{equation}
+T_{eq} = \left( \frac{Q(1 - \alpha)}{\epsilon\sigma} \right)^{\frac{1}{4}}
+\end{equation}
+
+Substituting the values:
+\begin{itemize}
+    \item $Q = 342 \, \text{W/m}^2$ (Average global solar radiation).
+    \item $\alpha = 0.3$ (Albedo).
+    \item $\sigma = 5.67 \times 10^{-8} \, \text{W/m}^2/\text{K}^4$ (Stefan-Boltzmann constant).
+    \item $\epsilon = 0.61$ (Emissivity, a typical value for Earth).
+\end{itemize}
+
+The equilibrium temperature ($T_{eq}$) is calculated as:
+
+\begin{equation}
+T_{eq} = \left( \frac{342 \times (1 - 0.3)}{0.61 \times 5.67 \times 10^{-8}} \right)^{\frac{1}{4}} \approx 288.44 \, \text{K}
+\end{equation}
+
+This equilibrium temperature is much closer to the actual average surface temperature of the Earth, demonstrating the significant impact of emissivity in the energy balance model.
+
 \section{Discussion}
 % Analyze the results you've presented.
 % How do the models compare with each other?
