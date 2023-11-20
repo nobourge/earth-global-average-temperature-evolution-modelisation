@@ -180,7 +180,50 @@ in the energy balance model.
     \label{fig:test}
 \end{figure}
 
-\subsection{temperature dependant OLR}
+\subsection{Temperature Dependent OLR}
+In this model, the Outgoing Longwave Radiation (OLR) 
+is considered to be a function of temperature, 
+represented by \( A + BT \), 
+where \( A \) and \( B \) are constants. 
+This approach acknowledges the fact that the Earth's radiation 
+into space varies with its surface temperature. 
+
+The equilibrium temperature under this model, 
+represented by the equation 
+\( R\frac{dT}{dt} = Q(1 - \alpha) - (A + BT) \), 
+aligns more closely with empirical observations 
+when compared to the basic EBM. 
+This model also accounts for feedback mechanisms 
+that are temperature-dependent, 
+offering a more nuanced understanding of the Earth's climate system. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{temperature_dependent_OLR.eps}
+\caption{Simulation results showing the effect of temperature-dependent OLR on Earth's climate.}
+\label{fig:tempDepOLR}
+\end{figure}
+
+\subsection{Temperature Dependent Albedo}
+The model incorporating temperature-dependent albedo 
+reflects the dynamic nature of the Earth's surface. 
+As the temperature varies, so does the albedo, 
+due to factors like melting ice and snow cover. 
+This is represented by the equation 
+\( \alpha(T) = 0.5 + 0.2 \tanh(0.1(265 - T - 273.5)) \).
+
+This model introduces a feedback mechanism 
+where rising temperatures can lead to decreased albedo, 
+further accelerating warming—a phenomenon observed 
+in the melting of polar ice caps. 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.8\textwidth]{temperature_dependent_albedo.eps}
+\caption{Simulation results for the EBM with temperature-dependent albedo, demonstrating the feedback loop between temperature and albedo.}
+\label{fig:tempDepAlbedo}
+\end{figure}
+
 
 \section{Discussion}
 % Analyze the results you've presented.
