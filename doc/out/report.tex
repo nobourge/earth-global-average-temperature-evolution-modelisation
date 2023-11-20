@@ -139,15 +139,24 @@ T_{eq} = \left( \frac{342 \times (1 - 0.3)}{0.61 \times 5.67 \times 10^{-8}} \ri
 
 This equilibrium temperature is much closer to the actual average surface temperature of the Earth, demonstrating the significant impact of emissivity in the energy balance model.
 
-\begin{figure}[H]
-    \begin{subfigure}[width=0.4\linewidth]
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{ebm_with_olr_0.eps}
+        \includegraphics[width=\textwidth]{ebm_with_olr_0.eps}
+            \caption{First subfigure}
+        \label{fig:sub1}
     \end{subfigure}
-    \begin{subfigure}[width=0.4\linewidth]
+    \hfill % Adds horizontal space between the subfigures
+    \begin{subfigure}[b]{0.4\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{ebm_with_diff_olrs.eps}
+        \includegraphics[width=\textwidth]{ebm_with_diff_olrs.eps}
+        \caption{Second subfigure}
+        \label{fig:sub2}
     \end{subfigure}
+    \caption{Overall figure caption}
+    \label{fig:test}
 \end{figure}
 
 \section{Discussion}

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1700472544 "d:/bourg/Documents/GitHub/earth-global-average-temperature-evolution-modelisation/doc/out/report.tex" "report.pdf" "report" 1700472545 0
+["pdflatex"] 1700477722 "d:/bourg/Documents/GitHub/earth-global-average-temperature-evolution-modelisation/doc/out/report.tex" "report.pdf" "report" 1700477723 0
   "C:/Users/bourg/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1698590254 279778 aa8c8b08a6e6f5b912fcdb1120e47ad8 ""
   "C:/Users/bourg/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1695220016 24142036 d6c2244ed847199d8344867affd5c17b ""
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001771820 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -59,6 +59,9 @@
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.sty" 1687170546 2462 91a1cb69153367feea29040eef0c27f4 ""
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty" 1687170546 5048 4a74b0804469fbfae7849704c4687a07 ""
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo" 1687170546 8449 9de778d73ba774a5f2bd601f23f8922e ""
+  "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1690828146 55961 5dd0cc28ec0f605352923cfc60f3574b ""
+  "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1690828146 72314 c1778fb03c6374e35a484f5ee100cc9e ""
+  "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty" 1690828146 12494 0c0cdb824278a4d51cefeb2e79901315 ""
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1622999586 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1601894156 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg" 1465890692 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -81,11 +84,13 @@
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657797096 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/bourg/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "albedo_extremes.eps" 1700154287 20968 e5634846cd775a4ef0694f04794f32e8 ""
-  "d:/bourg/Documents/GitHub/earth-global-average-temperature-evolution-modelisation/doc/out/report.tex" 1700472542 6142 61b7be5c75d2f1f0666bee3c8a371939 ""
+  "d:/bourg/Documents/GitHub/earth-global-average-temperature-evolution-modelisation/doc/out/report.tex" 1700477722 6763 bd514aa06e616d502d344814e9766e2a ""
   "ebm_basic.eps" 1700149856 21240 8ea1618ba747e24ff4fc8afeeba437ee ""
-  "report.aux" 1700472544 1997 aea3d3aaca7b72ec19b10b817ce68b9e "pdflatex"
-  "report.out" 1700472544 837 46abca0c3344aba18a2e9c34fc161b99 "pdflatex"
-  "report.tex" 1700472542 6142 61b7be5c75d2f1f0666bee3c8a371939 ""
+  "ebm_with_diff_olrs.eps" 1700476976 33445 db4eec26e6a2b02c2301d2d17394d101 ""
+  "ebm_with_olr_0.eps" 1700476976 23944 78cc38da1a1d4b41e3cc5e923c3d8b32 ""
+  "report.aux" 1700477723 2578 9330c0b6684df70e8190b57aa1b11b60 "pdflatex"
+  "report.out" 1700477723 837 46abca0c3344aba18a2e9c34fc161b99 "pdflatex"
+  "report.tex" 1700477722 6763 bd514aa06e616d502d344814e9766e2a ""
   (generated)
   "report.aux"
   "report.log"
