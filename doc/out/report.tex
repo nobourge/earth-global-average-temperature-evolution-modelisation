@@ -54,7 +54,7 @@ Comparing it to Earth's average temperature (${14.5}^\circ C$), we see a notable
     \label{fig:basic_ebm}
 \end{figure}
 
-% Do we need to repeat the values ??
+% FIXME: Do we need to repeat the values ??
 % \begin{itemize}
 %     \item $Q$ is the average global solar radiation (342 W/m$^2$).
 %     \item $\alpha$ is the albedo of the planet (0.3).
@@ -62,42 +62,34 @@ Comparing it to Earth's average temperature (${14.5}^\circ C$), we see a notable
 %     \item $T_{eq}$ is the equilibrium temperature in Kelvin.
 % \end{itemize}
 
-\subsubsection{Albedo Variation}
-The albedo of the Earth is not constant, and varies with the seasons. The albedo is higher in the winter due to the presence of snow and ice, and lower in the summer due to the presence of vegetation. 
+\subsubsection{Albedo variation}
 
-For an albedo ($\alpha$) of 0 (absorbing all incoming solar radiation), 
-the equilibrium temperature is approximately 278.68 Kelvin.
-For an albedo of 1 (reflecting all incoming solar radiation), 
-the equilibrium temperature is 0 Kelvin.
-These results highlight the significant impact of albedo on the Earth's temperature. 
-An albedo of 1 is an extreme and theoretical scenario 
-where all incoming solar radiation is reflected, 
-leading to no energy absorption 
-and hence a theoretical equilibrium temperature of absolute zero. 
-In contrast, an albedo of 0 leads to higher temperatures 
-due to the absorption of all incoming solar radiation. 
+% FIXME: This parapgrah is very long and kind of contains an explanation on how albedo influences the earth temperature
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\textwidth]{images/albedo_extremes.eps}
-\caption{Simulation results for the Basic EBM model with albedo extremes.}
-\label{fig:albedoExtremes}
+The albedo of the Earth is not constant, and varies with the seasons. The albedo is higher in the winter due to the presence of snow and ice, and lower in the summer due to the presence of vegetation\cite{kaper-2013-math-ac-albedo}. 
+
+For an albedo ($\alpha$) of 0 (absorbing all incoming solar radiation), the equilibrium temperature is approximately 278.68 Kelvin. For an albedo of 1 (reflecting all incoming solar radiation), the equilibrium temperature is 0 Kelvin. These results highlight the significant impact of albedo on the Earth's temperature. An albedo of 1 is an extreme and theoretical scenario 
+where all incoming solar radiation is reflected, leading to no energy absorption 
+and hence a theoretical equilibrium temperature of absolute zero. In contrast, an albedo of 0 leads to higher temperatures due to the absorption of all incoming solar radiation.
+
+\begin{figure}[!hbt]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/albedo_extremes.eps}
+    \caption{Simulation of the basic EBM with different albedos}
+    \label{fig:albedo_extremes}
 \end{figure}
 
 \subsection{Emissivity Dependent OLR}
-The equilibrium temperature of the system, 
-considering emissivity in the Energy Balance Model (EBM), 
-is calculated by modifying the original equation 
-to include the emissivity factor. 
+The equilibrium temperature of the system, considering emissivity in the Energy Balance Model (EBM), is calculated by modifying the original equation 
+to include the emissivity factor\cite{kaper-2013-math-ac-emissivity}. 
 
-The modified equation at equilibrium is:
+\noindent The modified equation at equilibrium is:
 
 \begin{equation}
 0 = Q(1 - \alpha) - \epsilon\sigma T_{eq}^4
 \end{equation}
 
-Rearranging this equation to solve for the equilibrium temperature ($T_{eq}$):
-
+\noindent Rearranging this equation to solve for the equilibrium temperature ($T_{eq}$):
 \begin{equation}
 \epsilon\sigma T_{eq}^4 = Q(1 - \alpha)
 \end{equation}
@@ -110,7 +102,7 @@ T_{eq}^4 = \frac{Q(1 - \alpha)}{\epsilon\sigma}
 T_{eq} = \left( \frac{Q(1 - \alpha)}{\epsilon\sigma} \right)^{\frac{1}{4}}
 \end{equation}
 
-Substituting the values:
+\noindent Substituting the values:
 \begin{itemize}
     \item $Q = 342 \, \text{W/m}^2$ (Average global solar radiation).
     \item $\alpha = 0.3$ (Albedo).
@@ -118,8 +110,7 @@ Substituting the values:
     \item $\epsilon = 0.61$ (Emissivity, a typical value for Earth).
 \end{itemize}
 
-The equilibrium temperature ($T_{eq}$) is calculated as:
-
+\noindent The equilibrium temperature ($T_{eq}$) is calculated as:
 \begin{equation}
 T_{eq} = \left( \frac{342 \times (1 - 0.3)}{0.61 \times 5.67 \times 10^{-8}} \right)^{\frac{1}{4}} \approx 288.44 \, \text{K}
 \end{equation}
@@ -133,7 +124,7 @@ in the energy balance model.
 
 % \begin{figure}[!hbt]
 %     \centering
-%     \includegraphics[width=\textwidth]{images/ebm_with_olr_0.eps}
+%     \includegraphics[width=\textwidth]{images/ebm_emissivity_0.eps}
 %         \caption{This plot demonstrates the hypothetical scenario 
 %         where the Earth does not emit any longwave radiation,
 %             with $\epsilon=0$, 
@@ -141,9 +132,9 @@ in the energy balance model.
 %     \label{fig:sub1}
 % \end{figure}
 
-\begin{figure}[!hbt]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/ebm_with_diff_olrs.eps}
+    \includegraphics[width=0.8\textwidth]{images/ebm_emissivity_diff.eps}
     \caption{EBM simulation with typical $\epsilon=0.61$,
     $\epsilon=0.76$, 
     showing negligible temperature change,

@@ -11,49 +11,54 @@ tspan = [0, 100];                   % Simulate for 100 years
 
 %%% QUESTION 1 %%%
 [t, T] = ode45(@(t, T) (Q * (1 - alpha) - sigma * T^4) / R, tspan, T0);
+
 plot(t, T);
 title('Basic EBM');
 xlabel('Time (years)');
 ylabel('Temperature (K)');
 
 %%% QUESTION 2 %%%
-% Solve and plot for varying albedo
-tspan = [0, 100]; % Simulate for 1000 years
-alpha1 = 0;
-alpha2 = 1;
-[t1, T1] = ode45(@(t, T) (Q * (1 - alpha1) - sigma * T^4) / R, tspan, T0);
-[t2, T2] = ode45(@(t, T) (Q * (1 - alpha2) - sigma * T^4) / R, tspan, T0);
-figure; % Open a new figure window
-plot(t1, T1, 'r', t2, T2, 'b');
-title('EBM with Varying Albedo');
-xlabel('Time (years)');
-ylabel('Temperature (K)');
-legend('Alpha = 0', 'Alpha = 1');
-
-% EBM with OLR (epsilon = 0)
-epsilon = 0.00; % Emissivity factor
-[t3, T3] = ode45(@(t, T) (Q * (1 - alpha) - epsilon * sigma * T^4) / R, tspan, T0);
-figure; % Open a new figure window
-plot(t3, T3);
-title('EBM with OLR (ε = 0)');
-xlabel('Time (years)');
-ylabel('Temperature (K)');
-
-% EBM with OLR (different epsilon)
-figure; % Open a new figure window
-
-epsilons = [0.61, 0.76, 0.95];
+alphas = [0, 0.3, 1];
 legends = cell(1, 3);
-for i = 1:length(epsilons)
-    e = epsilons(i);
-    [t, T] = ode45(@(t, T) (Q * (1 - alpha) - e * sigma * T^4) / R, tspan, T0);
-    legends{i} = ['ε =', num2str(e)];
+figure; % Open a new figure window
+for i = 1:length(alphas)
+    a = alphas(i);
+    [t, T] = ode45(@(t, T) (Q * (1 - a) - sigma * T^4) / R, tspan, T0);
+    legends{i} = ['α = ', num2str(a)];
     plot(t, T);
     hold on;
 end
 hold off;
 
-title('EBM with OLR');
+title('EBM with varying Albedo');
+legend(legends);
+xlabel('Time (years)');
+ylabel('Temperature (K)');
+
+%%% QUESTION 3 %%%
+% emissivity = 0
+epsilon = 0.00; % Emissivity factor
+figure;
+[t, T] = ode45(@(t, T) (Q * (1 - alpha) - epsilon * sigma * T^4) / R, tspan, T0);
+plot(t, T);
+title('EBM with emissivity (ε = 0)');
+xlabel('Time (years)');
+ylabel('Temperature (K)');
+
+% emissivity in [0.61, 0.76, 0.95]
+epsilons = [0.61, 0.76, 0.95];
+legends = cell(1, 3);
+figure;
+for i = 1:length(epsilons)
+    e = epsilons(i);
+    [t, T] = ode45(@(t, T) (Q * (1 - alpha) - e * sigma * T^4) / R, tspan, T0);
+    legends{i} = ['ε = ', num2str(e)];
+    plot(t, T);
+    hold on;
+end
+hold off;
+
+title('EBM with emissivity');
 legend(legends);
 xlabel('Time (years)');
 ylabel('Temperature (K)');
