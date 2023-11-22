@@ -27,55 +27,43 @@ The methodology employed in this project involves simulating Earth's temperature
 % Example of including a figure:
 
 \subsection{Energy Balance Model}
-The equilibrium temperature of the system in the basic Energy Balance Model (EBM) is calculated by balancing the incoming solar radiation with the outgoing longwave radiation. This balance is represented by the equation:
 
-\begin{equation}
-Q(1 - \alpha) = \sigma T_{eq}^4
+\subsubsection{Equilibrium Temperature}
+The equilibrium temperature of the system in the Energy Balance Model (EBM) is established by ensuring that the incoming solar radiation equals the outgoing longwave radiation\cite{kaper-2013-math-ac-equilibrium}.
+
+\begin{equation} \label{eq:equilibrium-0}
+Q(1 - \alpha) = \sigma T^4
 \end{equation}
 
-where:
-\begin{itemize}
-    \item $Q$ is the average global solar radiation (342 W/m$^2$).
-    \item $\alpha$ is the albedo of the planet (0.3).
-    \item $\sigma$ is the Stefan-Boltzmann constant ($5.67 \times 10^{-8}$ W/m$^2$/K$^4$).
-    \item $T_{eq}$ is the equilibrium temperature in Kelvin.
-\end{itemize}
-
-\subsubsection{Basic EBM}
-
-Rearranging the equation to solve for $T_{eq}$, we get:
-
-\begin{equation}
-T_{eq} = \left( \frac{Q(1 - \alpha)}{\sigma} \right)^{\frac{1}{4}}
+\noindent The equation \ref{eq:equilibrium-0} can then be rearranged to isolate $T$:
+\begin{equation} \label{eq:equilibrium-1}
+T = \left( \frac{Q(1 - \alpha)}{\sigma} \right)^{\frac{1}{4}}
 \end{equation}
 
-Substituting the values:
-
+\noindent The values can then be substituted in \ref{eq:equilibrium-1}, which give us:
 \begin{equation}
-T_{eq} = \left( \frac{342 \times (1 - 0.3)}{5.67 \times 10^{-8}} \right)^{\frac{1}{4}}
+    T = \left( \frac{342 \times (1 - 0.3)}{5.67 \times 10^{-8}} \right)^{\frac{1}{4}} \approx 254.91 \, \text{K} \, ({-18.24}^\circ C)
 \end{equation}
 
-Calculating this, we find:
+Comparing it to Earth's average temperature (${14.5}^\circ C$), we see a notable difference. This is because the model doesn't consider the \textit{greenhouse effect} and other factors affecting Earth's global temperature.
 
-\begin{equation}
-T_{eq} \approx 254.91 \, \text{K}
-\end{equation}
-
-This is the theoretical equilibrium temperature of the Earth according to this simple model, which does not account for the greenhouse effect.
-
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\textwidth]{images/ebm_basic.eps}
-\caption{Simulation results for the Basic EBM model.}
-\label{fig:basicEBM}
+\begin{figure}[!hbt]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/ebm_basic.eps}
+    \caption{Simulation of the basic EBM over a span of 100 years}
+    \label{fig:basic_ebm}
 \end{figure}
 
+% Do we need to repeat the values ??
+% \begin{itemize}
+%     \item $Q$ is the average global solar radiation (342 W/m$^2$).
+%     \item $\alpha$ is the albedo of the planet (0.3).
+%     \item $\sigma$ is the Stefan-Boltzmann constant ($5.67 \times 10^{-8}$ W/m$^2$/K$^4$).
+%     \item $T_{eq}$ is the equilibrium temperature in Kelvin.
+% \end{itemize}
+
 \subsubsection{Albedo Variation}
-The albedo of the Earth is not constant, 
-and varies with the seasons. 
-The albedo is higher in the winter due to the presence of snow and ice, 
-and lower in the summer due to the presence of vegetation. 
+The albedo of the Earth is not constant, and varies with the seasons. The albedo is higher in the winter due to the presence of snow and ice, and lower in the summer due to the presence of vegetation. 
 
 For an albedo ($\alpha$) of 0 (absorbing all incoming solar radiation), 
 the equilibrium temperature is approximately 278.68 Kelvin.
@@ -272,5 +260,8 @@ the nuanced nature of climate modeling.
 It highlights the importance of choosing and 
 calibrating model parameters accurately to reflect 
 the complexities of the real-world climate system.
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
 
 \end{document}
