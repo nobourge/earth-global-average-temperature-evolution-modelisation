@@ -65,7 +65,6 @@ ylabel('Temperature (K)');
 
 
 %%% QUESTION 4 %%%
-% OLR depending on Temperature in Celsius
 T0 = -273.15;               % Temperature in Celsius (0K)
 R = 2.912;                  % Heat capacity (W-yr/m^2/K)
 A = 202;                    % Constant in W/m^2
@@ -82,13 +81,12 @@ ylabel('Temperature (C)');
 
 
 %%% QUESTION 5 %%%
-% Albedo depending on Temperature
-T0 = 14.84; % Temperature in Celsius
-alpha_temp = @(T) 0.5 + 0.2 * tanh(0.1 * (265 - T));
-
-[t5, T5] = ode45(@(t, T) (Q * (1 - alpha_temp(T)) - epsilon * sigma * T^4) / R, tspan, T0);
-figure; % Open a new figure window
-plot(t5, T5);
+T0 = 14.84;               % Temperature in Celsius
+alpha_temp = @(T) 0.5 + 0.2 * tanh(0.1 * (265 - T - 273.5));
+figure;
+[t, T] = ode45(@(t, T) (Q * (1 - alpha_temp(T)) - (A + B * T)) / R, tspan, T0);
+plot(t, T);
 title('EBM with Temperature-Dependent Albedo');
 xlabel('Time (years)');
 ylabel('Temperature (C)');
+ylim([14 20]);

@@ -132,23 +132,23 @@ The equilibrium temperature under this model, represented by the equation \( R\f
 \end{figure}
 
 \subsection{Temperature Dependent Albedo}
-The model incorporating temperature-dependent albedo
-reflects the dynamic nature of the Earth's surface.
-As the temperature varies, so does the albedo,
-due to factors like melting ice and snow cover.
-This is represented by the equation
-\( \alpha(T) = 0.5 + 0.2 \tanh(0.1(265 - T - 273.5)) \).
+The model incorporating temperature-dependent albedo reflects the dynamic nature of the Earth's surface. As the temperature varies, so does the albedo,
+due to factors like melting ice and snow cover\cite{kaper-2013-math-ac-albedo}. This is represented by the equation \( \alpha(T) = 0.5 + 0.2 \tanh(0.1(265 - T - 273.5)) \).
 
-This model introduces a feedback mechanism
-where rising temperatures can lead to decreased albedo,
-further accelerating warming—a phenomenon observed
-in the melting of polar ice caps.
+This model introduces a feedback mechanism where rising temperatures can lead to decreased albedo, further accelerating warming—a phenomenon observed in the melting of polar ice caps.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/temperature_dependent_albedo.eps}
-    \caption{Simulation results for the EBM with temperature-dependent albedo, demonstrating the feedback loop between temperature and albedo.}
-    \label{fig:tempDepAlbedo}
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/temperature_dependent_albedo.eps}
+    \end{subfigure}
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/temperature_dependent_albedo_zoom.eps}
+    \end{subfigure}
+    \label{fig:ebm_temperature_albedo}
+    \caption{Simulation of the EBM with temperature-dependent albedo}
 \end{figure}
 
 
