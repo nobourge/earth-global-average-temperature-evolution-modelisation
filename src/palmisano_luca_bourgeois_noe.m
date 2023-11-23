@@ -64,23 +64,24 @@ xlabel('Time (years)');
 ylabel('Temperature (K)');
 
 
+%%% QUESTION 4 %%%
 % OLR depending on Temperature in Celsius
-T0 = 0; % Temperature in Celsius
-R = 2.912; % Heat capacity (W-yr/m^2/K)
-A = 202; % Constant in W/m^2
-B = 1.90; % Constant in W/m^2/°C
+T0 = -273.15;               % Temperature in Celsius (0K)
+R = 2.912;                  % Heat capacity (W-yr/m^2/K)
+A = 202;                    % Constant in W/m^2
+B = 1.90;                   % Constant in W/m^2/°C
 
 % Temperature conversion is not needed for constants A and B as they are already for °C.
 % However, the temperature T in the equation must be converted from Kelvin to Celsius.
-[t4, T4] = ode45(@(t, T) (Q * (1 - alpha) - (A + B * T)) / R, tspan, T0);
-figure; % Open a new figure window
-plot(t4, T4);
+figure;
+[t, T] = ode45(@(t, T) (Q * (1 - alpha) - (A + B * T)) / R, tspan, T0);
+plot(t, T);
 title('EBM with Temperature-Dependent OLR (in Celsius)');
 xlabel('Time (years)');
 ylabel('Temperature (C)');
 
 
-
+%%% QUESTION 5 %%%
 % Albedo depending on Temperature
 T0 = 14.84; % Temperature in Celsius
 alpha_temp = @(T) 0.5 + 0.2 * tanh(0.1 * (265 - T));

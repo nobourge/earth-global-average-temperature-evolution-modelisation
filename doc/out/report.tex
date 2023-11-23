@@ -63,7 +63,7 @@ Comparing it to Earth's average temperature (${14.5}^\circ C$), we see a notable
 
 % FIXME: This parapgrah is very long and kind of contains an explanation on how albedo influences the earth temperature
 
-The albedo of the Earth is not constant, and varies with the seasons. The albedo is higher in the winter due to the presence of snow and ice, and lower in the summer due to the presence of vegetation\cite{kaper-2013-math-ac-albedo}. 
+The albedo of the Earth is not constant, and varies with the seasons. The albedo is higher in the winter due to the presence of snow and ice, and lower in the summer due to the presence of vegetation\cite{kaper-2013-math-ac-albedo}.
 
 For an albedo ($\alpha$) of 0 (absorbing all incoming solar radiation), the equilibrium temperature is approximately 278.68 Kelvin. For an albedo of 1 (reflecting all incoming solar radiation), the equilibrium temperature is 0 Kelvin. These results highlight the significant impact of albedo on the Earth's temperature. An albedo of 1 is an extreme and theoretical scenario where all incoming solar radiation is reflected, leading to no energy absorption and hence a theoretical equilibrium temperature of absolute zero. In contrast, an albedo of 0 leads to higher temperatures due to the absorption of all incoming solar radiation.
 
@@ -99,7 +99,7 @@ The equilibrium temperature of the system, considering emissivity in the Energy 
 %     \item $\epsilon = 0.61$ (Emissivity, a typical value for Earth).
 % \end{itemize}
 
-This equilibrium temperature is much closer to the actual average surface temperature of the Earth, demonstrating the significant impact of emissivity 
+This equilibrium temperature is much closer to the actual average surface temperature of the Earth, demonstrating the significant impact of emissivity
 in the energy balance model.
 
 \begin{figure}[H]
@@ -107,53 +107,42 @@ in the energy balance model.
     \includegraphics[width=0.8\textwidth]{images/ebm_emissivity_diff.eps}
     \caption{Simulation of EBM with different emissivity factors over a span of 100 years}
     % \caption{EBM simulation with typical $\epsilon=0.61$,
-    % $\epsilon=0.76$, 
+    % $\epsilon=0.76$,
     % showing negligible temperature change,
-    % and near maximum $\epsilon=0.95$, 
-    % showing a small temperature decrease. 
-    % This plot represents a more realistic scenario 
-    % with a higher emissivity, 
+    % and near maximum $\epsilon=0.95$,
+    % showing a small temperature decrease.
+    % This plot represents a more realistic scenario
+    % with a higher emissivity,
     % resulting in minimal temperature variation over time.}
 
     \label{fig:ebm_emissivity}
 \end{figure}
 
 \subsection{Temperature Dependent OLR}
-In this model, the Outgoing Longwave Radiation (OLR) 
-is considered to be a function of temperature, 
-represented by \( A + BT \), 
-where \( A \) and \( B \) are constants. 
-This approach acknowledges the fact that the Earth's radiation 
-into space varies with its surface temperature. 
+In this model, the Outgoing Longwave Radiation (OLR) is considered to be a function of temperature, represented by \( A + BT \), where \( A \) and \( B \) are constants. This approach acknowledges the fact that the Earth's radiation into space varies with its surface temperature\cite{kaper-2013-math-ac-budyko}.
 
-The equilibrium temperature under this model, 
-represented by the equation 
-\( R\frac{dT}{dt} = Q(1 - \alpha) - (A + BT) \), 
-aligns more closely with empirical observations 
-when compared to the basic EBM. 
-This model also accounts for feedback mechanisms 
-that are temperature-dependent, 
-offering a more nuanced understanding of the Earth's climate system. 
+% FIXME: Where does this comes from
+The equilibrium temperature under this model, represented by the equation \( R\frac{dT}{dt} = Q(1 - \alpha) - (A + BT) \), aligns more closely with empirical observations when compared to the basic EBM. This model also accounts for feedback mechanisms that are temperature-dependent offering a more nuanced understanding of the Earth's climate system.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.8\textwidth]{images/temperature_dependent_OLR.eps}
-\caption{Simulation results showing the effect of temperature-dependent OLR on Earth's climate.}
-\label{fig:tempDepOLR}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/temperature_dependent_olr.eps}
+    \caption{Simulation of the EBM with temperature dependent OLR over a span of 100 years}
+    \label{fig:ebm_temperature_olr}
 \end{figure}
 
 \subsection{Temperature Dependent Albedo}
-The model incorporating temperature-dependent albedo 
-reflects the dynamic nature of the Earth's surface. 
-As the temperature varies, so does the albedo, 
-due to factors like melting ice and snow cover. 
-This is represented by the equation 
+The model incorporating temperature-dependent albedo
+reflects the dynamic nature of the Earth's surface.
+As the temperature varies, so does the albedo,
+due to factors like melting ice and snow cover.
+This is represented by the equation
 \( \alpha(T) = 0.5 + 0.2 \tanh(0.1(265 - T - 273.5)) \).
 
-This model introduces a feedback mechanism 
-where rising temperatures can lead to decreased albedo, 
-further accelerating warming—a phenomenon observed 
-in the melting of polar ice caps. 
+This model introduces a feedback mechanism
+where rising temperatures can lead to decreased albedo,
+further accelerating warming—a phenomenon observed
+in the melting of polar ice caps.
 
 \begin{figure}[ht]
 \centering
@@ -172,54 +161,54 @@ in the melting of polar ice caps.
 \subsection{Analysis of Emissivity and Temperature-Dependent OLR Models}
 
 
-The results from the simulations raise interesting points of discussion, 
-particularly regarding the relative accuracy of the models 
-in predicting Earth's average temperature. 
-The model incorporating emissivity (Question 3) yielded 
-a temperature closer to the real-world average of 14.84°C, 
-whereas the temperature-dependent OLR model (Question 4) 
+The results from the simulations raise interesting points of discussion,
+particularly regarding the relative accuracy of the models
+in predicting Earth's average temperature.
+The model incorporating emissivity (Question 3) yielded
+a temperature closer to the real-world average of 14.84°C,
+whereas the temperature-dependent OLR model (Question 4)
 deviated more significantly from this value.
 
 \subsubsection{Impact of Emissivity in Climate Models}
-The inclusion of emissivity in the energy balance model significantly 
+The inclusion of emissivity in the energy balance model significantly
 enhances its realism. Emissivity, representing the Earth's ability to emit
- radiation, is a key factor in the Earth's energy balance. 
- Our simulation using an emissivity factor close to Earth's real value 
+ radiation, is a key factor in the Earth's energy balance.
+ Our simulation using an emissivity factor close to Earth's real value
  (approximately 0.61) resulted in a temperature estimation that aligns
-  more closely with the actual average global temperature. 
-  This underscores the importance of emissivity in modeling Earth's climate 
+  more closely with the actual average global temperature.
+  This underscores the importance of emissivity in modeling Earth's climate
   and suggests that it captures essential aspects of the Earth's radiation
    dynamics.
 
 \subsubsection{Challenges with Temperature-Dependent OLR}
-The model with temperature-dependent OLR, despite adding complexity, 
-may not have been as effective in mimicking the actual climate system. 
-The parameters \( A \) and \( B \) in the \( A + BT \) formulation of OLR 
-are crucial. If these parameters do not accurately reflect the Earth's real 
-radiation properties, 
-the model's predictions can deviate from real-world temperatures. 
-This indicates the challenge of accurately calibrating climate models 
+The model with temperature-dependent OLR, despite adding complexity,
+may not have been as effective in mimicking the actual climate system.
+The parameters \( A \) and \( B \) in the \( A + BT \) formulation of OLR
+are crucial. If these parameters do not accurately reflect the Earth's real
+radiation properties,
+the model's predictions can deviate from real-world temperatures.
+This indicates the challenge of accurately calibrating climate models
 to match the complexities of the Earth's climate system.
 
 \subsection{Model Limitations and Realism}
-Both models are simplified representations of the actual climate system. 
-The differences in their predictions highlight the impact of various 
-climatic factors on Earth's temperature. It also emphasizes the need 
-for precise parameter selection and calibration in climate modeling. 
-The closer alignment of the emissivity model with the actual 
-average temperature suggests that, for our models, 
-the emissivity factor is more crucial in capturing the key aspects of 
-Earth's thermal radiation balance compared to the linear relationship of 
+Both models are simplified representations of the actual climate system.
+The differences in their predictions highlight the impact of various
+climatic factors on Earth's temperature. It also emphasizes the need
+for precise parameter selection and calibration in climate modeling.
+The closer alignment of the emissivity model with the actual
+average temperature suggests that, for our models,
+the emissivity factor is more crucial in capturing the key aspects of
+Earth's thermal radiation balance compared to the linear relationship of
 temperature-dependent OLR.
 
 
 \section{Conclusion}
 % Summarize your main findings.
 % Reflect on what these results mean for our understanding of Earth's climate system.
-The comparison between the two models demonstrates 
-the nuanced nature of climate modeling. 
-It highlights the importance of choosing and 
-calibrating model parameters accurately to reflect 
+The comparison between the two models demonstrates
+the nuanced nature of climate modeling.
+It highlights the importance of choosing and
+calibrating model parameters accurately to reflect
 the complexities of the real-world climate system.
 
 \bibliographystyle{unsrt}
