@@ -7,7 +7,7 @@ Q = 342;                            % Average global solar radiation (W/m^2)
 alpha = 0.3;                        % Albedo of the planet
 sigma = 5.67e-8;                    % Stefan-Boltzmann constant (W/m^2/K^4)
 T0 = 0;                             % Starting from freezing point of water
-tspan = [0, 100];                   % Simulate for 100 years
+tspan = [0, 10000];                 % Simulate for 10000 years
 
 %%% QUESTION 1 %%%
 [t, T] = ode45(@(t, T) (Q * (1 - alpha) - sigma * T^4) / R, tspan, T0);
