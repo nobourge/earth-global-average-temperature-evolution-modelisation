@@ -65,7 +65,7 @@ ylabel('Temperature (K)');
 
 
 %%% QUESTION 4 %%%
-T0 = -273.15;               % Temperature in Celsius (0K)
+T0 = 14.84;                 % Temperature in Celsius
 R = 2.912;                  % Heat capacity (W-yr/m^2/K)
 A = 202;                    % Constant in W/m^2
 B = 1.90;                   % Constant in W/m^2/°C
@@ -78,11 +78,11 @@ plot(t, T);
 title('EBM with Temperature-Dependent OLR (in Celsius)');
 xlabel('Time (years)');
 ylabel('Temperature (C)');
-
+ylim([14 20]);
 
 %%% QUESTION 5 %%%
-T0 = 14.84;               % Temperature in Celsius
-alpha_temp = @(T) 0.5 + 0.2 * tanh(0.1 * (265 - T - 273.5));
+T0 = 14.84;                 % Temperature in Celsius
+alpha_temp = @(T) 0.5 + 0.2 * tanh(0.1 * (265 - T - 273.15));
 figure;
 [t, T] = ode45(@(t, T) (Q * (1 - alpha_temp(T)) - (A + B * T)) / R, tspan, T0);
 plot(t, T);

@@ -100,20 +100,13 @@ The equilibrium temperature of the system, considering emissivity in the Energy 
 % \end{itemize}
 
 This equilibrium temperature is much closer to the actual average surface temperature of the Earth, demonstrating the significant impact of emissivity
-in the energy balance model.
+in the energy balance model. In the case where the Earth does not emit any longware radiation ($\epsilon=0$), we have noticed a increase of nearly 85 Kelvin per year.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/ebm_emissivity_diff.eps}
-    \caption{Simulation of EBM with different emissivity factors}
-    % \caption{EBM simulation with typical $\epsilon=0.61$,
-    % $\epsilon=0.76$,
-    % showing negligible temperature change,
-    % and near maximum $\epsilon=0.95$,
-    % showing a small temperature decrease.
-    % This plot represents a more realistic scenario
-    % with a higher emissivity,
-    % resulting in minimal temperature variation over time.}
+    % \caption{Simulation of EBM with different emissivity factors}
+    \caption{EBM simulation with typical $\epsilon=0.61$, $\epsilon=0.76$, showing negligible temperature change, and near maximum $\epsilon=0.95$, showing a small temperature decrease. This plot represents a more realistic scenario with a higher emissivity, resulting in minimal temperature variation over time.}
 
     \label{fig:ebm_emissivity}
 \end{figure}
@@ -139,14 +132,7 @@ This model introduces a feedback mechanism where rising temperatures can lead to
 
 \begin{figure}[H]
     \centering
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/temperature_dependent_albedo.eps}
-    \end{subfigure}
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{images/temperature_dependent_albedo_zoom.eps}
-    \end{subfigure}
+    \includegraphics[width=0.8\textwidth]{images/temperature_dependent_albedo.eps}
     \label{fig:ebm_temperature_albedo}
     \caption{Simulation of the EBM with temperature-dependent albedo}
 \end{figure}
